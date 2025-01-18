@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cambio de Tutorías</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="vista.js"></script>
+    <script src="pdf.js"></script>
+    <script src="valid6ordu.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+        <img src="https://www.ehu.eus/documents/2947353/2967241/blanco_pequeno.jpg" alt="Logo UPV/EHU" style="width: 10%;">
+        <h1>Tutoretza Ordutegiaren Aldaketa / Formulario de Cambio de Tutorías</h1>
+    </div>
+    
+</head>
+<body>
+    <form id="tutoriaForm">
+        <label for="profesor"><h4>Irakaslearen Izena<br><em>Nombre del Profesor</em></h4></label>
+        <input type="text" id="profesor" name="profesor" required value="Daniel Losada">
+
+        <div class="column-container">
+            <div class="column">
+                <h4>Data eta Ordua (Bertan Behera)<br><em>Fecha y Hora (Cancelada)</em></h4>
+                <div class="date-inputs">
+                    <div>
+                        <label for="fechaModifica">Data (Bertan Behera)<br><em>Fecha (Cancelada)</em></label>
+                        <input type="date" id="fechaModifica" name="fechaModifica" required value="2025-01-01">
+                    </div>
+                </div>
+                <div class="time-inputs">
+                    <div>
+                        <label for="horaModificaInicio">Hasiera ordua<br><em>Hora de Inicio</em></label>
+                        <input type="time" id="horaModificaInicio" name="horaModificaInicio" required value="08:00">
+                    </div>
+                    <div>
+                        <label for="horaModificaFin">Bukaera ordua<br><em>Hora de Fin</em></label>
+                        <input type="time" id="horaModificaFin" name="horaModificaFin" required value="09:00">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <h4>Data eta Ordua (Berria)<br><em>Fecha y Hora (Nueva)</em></h4>
+                <div class="date-inputs">
+                    <div>
+                        <label for="fechaNueva">Data (Berria)<br><em>Fecha (Nueva)</em></label>
+                        <input type="date" id="fechaNueva" name="fechaNueva" required value="2025-01-02">
+                    </div>
+                </div>
+                <div class="time-inputs">
+                    <div>
+                        <label for="horaNuevaInicio">Hasiera ordua<br><em>Hora de Inicio</em></label>
+                        <input type="time" id="horaNuevaInicio" name="horaNuevaInicio" required value="08:00">
+                    </div>
+                    <div>
+                        <label for="horaNuevaFin">Bukaera ordua<br><em>Hora de Fin</em></label>
+                        <input type="time" id="horaNuevaFin" name="horaNuevaFin" required value="09:00">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button type="button" onclick="generarImpresion()">Generar Vista Previa</button>
+            <button type="button" onclick="generarPDF()" id="btnPDF" style="display: none;">Descargar PDF</button>
+        </div>
+    </form>
+
+</body>
+</html>
