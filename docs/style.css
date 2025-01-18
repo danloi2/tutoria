@@ -1,3 +1,16 @@
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+header img {
+    height: 50px;
+    margin-right: 10px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,18 +27,27 @@ body {
     font-weight: bold;
 }
 
-
-header {
+.column-container {
     display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    gap: 20px; /* Espaciado entre columnas */
+    box-sizing: border-box;
+    width: 100%; /* Garantiza que el contenedor no supere el ancho disponible */
+}
+
+.column {
+    flex: 1;
+    max-width: 45%; /* Limita el ancho de cada columna */
+    box-sizing: border-box;
     padding: 10px;
-    text-align: center;
+    border: 1px solid #ccc; /* Asegura que las líneas siempre sean visibles */
+    margin-right: 20px; /* Espaciado entre columnas */
 }
-header img {
-    height: 50px;
-    margin-right: 10px;
+
+.column:last-child {
+    margin-right: 0; /* Elimina márgenes innecesarios en la última columna */
 }
+
 h1 {
     font-size: 20px;
 }
@@ -83,16 +105,10 @@ button:hover {
     box-sizing: border-box; /* Incluir relleno y borde dentro del ancho total */
 }
 
-.column-container {
-    display: flex;
-    justify-content: space-between;
-}
-.column {
-    width: 48%;
-}
 .output h3 {
     text-align: center;
 }
+
 @media print {
     form, .button-container {
         display: none;
@@ -105,23 +121,3 @@ button:hover {
     }
 }
 
-.column-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px; /* Espaciado entre columnas */
-    box-sizing: border-box;
-    width: 100%; /* Garantiza que el contenedor no supere el ancho disponible */
-}
-
-.column {
-    flex: 1;
-    max-width: 45%; /* Limita el ancho de cada columna */
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #ccc; /* Asegura que las líneas siempre sean visibles */
-    margin-right: 20px; /* Espaciado entre columnas */
-}
-
-.column:last-child {
-    margin-right: 0; /* Elimina márgenes innecesarios en la última columna */
-}
