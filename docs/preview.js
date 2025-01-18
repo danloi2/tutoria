@@ -34,14 +34,14 @@ function generarImpresion() {
             <div class="column-container">
                 <div class="column">
                     <h4>Aldatutako Data eta Ordua<br>Fecha y Hora que se Modifica</h4>
-                    <p>Data / Fecha: ${fechaModifica}</p>
-                    <p>Ordua / Hora: ${horaModificaInicio} - ${horaModificaFin}</p>
+                    <p>Data / Fecha: <span class="aldatuta">${fechaModifica}</span></p>
+                    <p>Ordua / Hora: <span class="aldatuta">${horaModificaInicio} - ${horaModificaFin}</span></p>
                 </div>
             
                 <div class="column">
                     <h4>Ordutegi Berria<br>Nuevo Horario</h4>
-                    <p>Data / Fecha: ${fechaNueva}</p>
-                    <p>Ordua / Hora: ${horaNuevaInicio} - ${horaNuevaFin}</p>
+                    <p>Data / Fecha: <span class="berria"> ${fechaNueva}</span></p>
+                    <p>Ordua / Hora: <span class="berria"> ${horaNuevaInicio} - ${horaNuevaFin}</span></p>
                 </div>
             </div>
                 <center><p>Donostian, ${fechaActualLargaEuskara}<br>En Donostia-San Sebastián, ${fechaActualLarga}</p></center>
@@ -60,14 +60,14 @@ function generarImpresion() {
             <div class="column-container">
                 <div class="column">
                     <h4>Aldatutako Data eta Ordua<br>Fecha y Hora que se Modifica</h4>
-                    <p>Data / Fecha: ${fechaModifica}</p>
-                    <p>Ordua / Hora: ${horaModificaInicio} - ${horaModificaFin}</p>
+                    <p>Data / Fecha: <span class="aldatuta"> ${fechaModifica}</span></p>
+                    <p>Ordua / Hora: <span class="aldatuta"> ${horaModificaInicio} - ${horaModificaFin}</span></p>
                 </div>
             
                 <div class="column">
                     <h4>Ordutegi Berria<br>Nuevo Horario</h4>
-                    <p>Data / Fecha: ${fechaNueva}</p>
-                    <p>Ordua / Hora: ${horaNuevaInicio} - ${horaNuevaFin}</p><br>
+                    <p>Data / Fecha: <span class="berria"> ${fechaNueva}</span></p>
+                    <p>Ordua / Hora: <span class="berria"> ${horaNuevaInicio} - ${horaNuevaFin}</span></p><br>
                 </div>
             </div>
                 <center><p>Donostian, ${fechaActualLargaEuskara}<br>En Donostia-San Sebastián, ${fechaActualLarga}</p></center>

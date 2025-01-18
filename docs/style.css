@@ -3,6 +3,18 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.aldatuta {
+    color: red;
+    font-weight: bold; 
+}
+
+.berria {
+    color: blue;
+    font-weight: bold;
+}
+
+
 header {
     display: flex;
     align-items: center;
