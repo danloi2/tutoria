@@ -33,7 +33,7 @@ function generarImpresion() {
               <div class="column-container">
     <div class="column">
         <h4>Aldatutako Data eta Ordua<br>Fecha y Hora que se Modifica</h4>
-        <p>Data / Fecha: ${fechaModifica}</p>
+        <p>Data / Fecha:${fechaModifica}</p>
         <p>Ordua / Hora: ${horaModificaInicio} - ${horaModificaFin}</p>
     </div>
     <div class="column">
