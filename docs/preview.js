@@ -33,13 +33,13 @@ function generarImpresion() {
               <div class="column-container">
     <div class="column">
         <h4>Aldatutako Data eta Ordua<br>Fecha y Hora que se Modifica</h4>
-        <p>Data / Fecha: <br> ${fechaModifica}</p>
-        <p>Ordua / Hora: <br> ${horaModificaInicio} - ${horaModificaFin}</p>
+        <p>Data / Fecha: ${fechaModifica}</p>
+        <p>Ordua / Hora: ${horaModificaInicio} - ${horaModificaFin}</p>
     </div>
     <div class="column">
         <h4>Ordutegi Berria<br>Nuevo Horario</h4>
-        <p>Data / Fecha: <br> ${fechaNueva}</p>
-        <p>Ordua / Hora: <br> ${horaNuevaInicio} - ${horaNuevaFin}</p>
+        <p>Data / Fecha: ${fechaNueva}</p>
+        <p>Ordua / Hora: ${horaNuevaInicio} - ${horaNuevaFin}</p>
     </div>
 </div>
                 <center>
@@ -65,13 +65,13 @@ function generarImpresion() {
                 <div class="column-container">
     <div class="column">
         <h4>Aldatutako Data eta Ordua<br>Fecha y Hora que se Modifica</h4>
-        <p>Data / Fecha: <br> ${fechaModifica}</p>
-        <p>Ordua / Hora: <br> ${horaModificaInicio} - ${horaModificaFin}</p>
+        <p>Data / Fecha: ${fechaModifica}</p>
+        <p>Ordua / Hora: ${horaModificaInicio} - ${horaModificaFin}</p>
     </div>
     <div class="column">
         <h4>Ordutegi Berria<br>Nuevo Horario</h4>
-        <p>Data / Fecha: <br> ${fechaNueva}</p>
-        <p>Ordua / Hora: <br> ${horaNuevaInicio} - ${horaNuevaFin}</p>
+        <p>Data / Fecha: ${fechaNueva}</p>
+        <p>Ordua / Hora: ${horaNuevaInicio} - ${horaNuevaFin}</p>
     </div>
 </div>
                 <center>
