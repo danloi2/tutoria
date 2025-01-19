@@ -9,58 +9,54 @@
     <script src="pdf.js"></script>
     <script src="valid.js"></script>
     <link rel="stylesheet" href="style.css">
-    <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-        <img src="https://www.ehu.eus/documents/2947353/2967241/blanco_pequeno.jpg" alt="Logo UPV/EHU" style="width: 10%;">
-        <h1>Tutoretza Ordutegiaren Aldaketa / Formulario de Cambio de Tutorías</h1>
-    </div>
-    
 </head>
+
 <body>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+        <img src="img/ehu.jpg" alt="Logo UPV/EHU" style="width: 10%;">
+        <h1>Tutoretza Ordutegiaren Aldaketa /  <span class="grisa">Formulario de Cambio de Tutorías</span></h1>
+        <br>
+    </div>
     <form id="tutoriaForm">
-        <label for="profesor"><h4>Irakaslearen Izena<br><em>Nombre del Profesor</em></h4></label>
-        <input type="text" id="profesor" name="profesor" required value="Daniel Losada">
+        <p><strong>Irakaslea /  <span class="grisa">Profesor:</span></strong><input type="text" id="profesor" name="profesor" required value="Daniel Losada"></p>
 
-        <div class="column-container">
-            <div class="column">
-                <h4>Data eta Ordua (Bertan Behera)<br><em>Fecha y Hora (Cancelada)</em></h4>
-                <div class="date-inputs">
-                    <div>
-                        <label for="fechaModifica">Data (Bertan Behera)<br><em>Fecha (Cancelada)</em></label>
+        <table>
+            <thead>
+                <tr>
+                    <th>ALDATUTAKO DATA ETA ORDUA<br> <span class="grisa">FECHA Y HORA CANCELADA</span></th>
+                    <th>DATA ETA ORDUTEGI BERRIA<br> <span class="grisa">FECHA Y HORA NUEVA</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data /  <span class="grisa">Fecha:
+                        <br>
                         <input type="date" id="fechaModifica" name="fechaModifica" required value="2025-01-01">
-                    </div>
-                </div>
-                <div class="time-inputs">
-                    <div>
-                        <label for="horaModificaInicio">Hasiera ordua<br><em>Hora de Inicio</em></label>
-                        <input type="time" id="horaModificaInicio" name="horaModificaInicio" required value="08:00">
-                    </div>
-                    <div>
-                        <label for="horaModificaFin">Bukaera ordua<br><em>Hora de Fin</em></label>
-                        <input type="time" id="horaModificaFin" name="horaModificaFin" required value="09:00">
-                    </div>
-                </div>
-            </div>
-
-            <div class="column">
-                <h4>Data eta Ordua (Berria)<br><em>Fecha y Hora (Nueva)</em></h4>
-                <div class="date-inputs">
-                    <div>
-                        <label for="fechaNueva">Data (Berria)<br><em>Fecha (Nueva)</em></label>
+                    </td>
+                    <td>Data /  <span class="grisa">Fecha:
+                        <br>
                         <input type="date" id="fechaNueva" name="fechaNueva" required value="2025-01-02">
-                    </div>
-                </div>
-                <div class="time-inputs">
-                    <div>
-                        <label for="horaNuevaInicio">Hasiera ordua<br><em>Hora de Inicio</em></label>
+                    </td> 
+                </tr>
+                <tr>
+                    <td>Ordua /  <span class="grisa">Hora:
+                        <br>
+                        <input type="time" id="horaModificaInicio" name="horaModificaInicio" required value="08:00">
+                        <input type="time" id="horaModificaFin" name="horaModificaFin" required value="09:00">
+
+                    </td>
+                    <td>Ordua /  <span class="grisa">Hora:
+                        <br>
                         <input type="time" id="horaNuevaInicio" name="horaNuevaInicio" required value="08:00">
-                    </div>
-                    <div>
-                        <label for="horaNuevaFin">Bukaera ordua<br><em>Hora de Fin</em></label>
                         <input type="time" id="horaNuevaFin" name="horaNuevaFin" required value="09:00">
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </td>
+            </tbody>
+
+                
+            
+        </table>
+    </div>
+
 
         <div class="button-container">
             <button type="button" onclick="generarImpresion()">Generar Vista Previa</button>

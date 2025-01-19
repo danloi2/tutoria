@@ -6,15 +6,8 @@ header {
     text-align: center;
 }
 
-header img {
-    height: 50px;
-    margin-right: 10px;
-}
-
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 .aldatuta {
@@ -27,29 +20,13 @@ body {
     font-weight: bold;
 }
 
-.column-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px; /* Espaciado entre columnas */
-    box-sizing: border-box;
-    width: 100%; /* Garantiza que el contenedor no supere el ancho disponible */
-}
-
-.column {
-    flex: 1;
-    max-width: 45%; /* Limita el ancho de cada columna */
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #ccc; /* Asegura que las líneas siempre sean visibles */
-    margin-right: 20px; /* Espaciado entre columnas */
-}
-
-.column:last-child {
-    margin-right: 0; /* Elimina márgenes innecesarios en la última columna */
+.grisa {
+    font-style: italic;
+    color: gray;
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 18px;
 }
 form {
     max-width: 700px;
@@ -60,14 +37,9 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
 }
-label {
-    display: block;
-    margin: 10px 0 5px;
-}
+
 input {
-    width: 50%;
     padding: 8px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -96,28 +68,43 @@ button:hover {
     background-color: #0056b3;
 }
 .output {
-    margin: 20px auto; /* Centrar el contenedor horizontalmente */
-    padding: 20px;
-    border: 1px solid #ccc; /* Hacer visible el borde para pruebas */
+    margin: 10px auto; /* Centrar el contenedor horizontalmente */
+    padding: auto auto auto auto;
     border-radius: 10px;
     background-color: #fff;
-    max-width: 794px; /* Ancho máximo para una hoja A4 a 96 DPI */
+    max-width: 750px; /* Ancho máximo para una hoja A4 a 96 DPI */
     box-sizing: border-box; /* Incluir relleno y borde dentro del ancho total */
+}
+
+.output p {
+    text-align: center;
+}   
+
+.output p.small {
+    
+    margin: 0 0;
+    text-align: justify;
+    font-size: small;
+    padding: 1em
+
 }
 
 .output h3 {
     text-align: center;
+
 }
 
-@media print {
-    form, .button-container {
-        display: none;
-    }
-    .output {
-        border: none;
-        box-shadow: none;
-        margin: 0;
-        padding: 0;
-    }
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 5px auto;
 }
-
+th, td {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 5px;
+}
+th {
+    background-color: #f4f4f4;
+    padding: auto auto auto auto;
+}
