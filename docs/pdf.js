@@ -1,4 +1,3 @@
-// Función para generar el PDF
 function generarPDF() {
     if (!contenidoParaPDF) {
         alert("Primero debe generar una vista previa.");
@@ -18,32 +17,23 @@ function generarPDF() {
     };
 
     html2pdf()
-    .from(elementoTemporal)
-    .set({
-        margin: 10, // Márgenes alrededor del contenido
-        filename: 'Cambio_Tutorias.pdf', // Nombre del archivo PDF
-        image: { type: 'jpeg', quality: 0.98 }, // Calidad de la imagen generada
-        html2canvas: {
-            scale: 2, // Aumenta la resolución del contenido renderizado
-            scrollX: 0, // Asegura que no haya desplazamiento horizontal
-            scrollY: 0,  // Asegura que no haya desplazamiento vertical
-            useCORS: true // Permite el uso de recursos de otros dominios
-        },
-        jsPDF: { 
-            unit: 'mm', // Unidades en milímetros
-            format: 'a4', // Formato A4
-            orientation: 'portrait' // Orientación vertical
-        }
-    })
-    .save() // Genera y guarda el PDF
-    .then(() => {
-        console.log('PDF generado exitosamente.');
-    })
-    .catch((error) => {
-        console.error('Error al generar el PDF:', error);
-    })
-    .finally(() => {
-        // Limpieza del DOM
-        document.body.removeChild(elementoTemporal);
-    });
+        .from(elementoTemporal)
+        .set(options)
+        .outputPdf('blob') // Cambiar para obtener el PDF como Blob
+        .then((pdfBlob) => {
+            // Guardar el PDF generado en una variable global
+            window.pdfBlob = pdfBlob;
+
+            // Mostrar el botón de firma si se requiere
+            document.getElementById('btnFirmarPDF').style.display = 'inline-block';
+
+            console.log('PDF generado exitosamente.');
+        })
+        .catch((error) => {
+            console.error('Error al generar el PDF:', error);
+        })
+        .finally(() => {
+            // Limpieza del DOM
+            document.body.removeChild(elementoTemporal);
+        });
 }

@@ -105,6 +105,7 @@ function generarImpresion() {
 `;
 
   document.getElementById("btnPDF").style.display = "inline-block";
+  /*document.getElementById("btnFirmarPDF").style.display = "inline-block";*/
   const nuevaPestaña = window.open("", "_blank");
   nuevaPestaña.document.write(`
         <!DOCTYPE html>

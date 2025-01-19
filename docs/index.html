@@ -8,6 +8,7 @@
     <script src="preview.js"></script>
     <script src="pdf.js"></script>
     <script src="valid.js"></script>
+    <script src="certificar.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -58,10 +59,11 @@
     </div>
 
 
-        <div class="button-container">
-            <button type="button" onclick="generarImpresion()">Generar Vista Previa</button>
-            <button type="button" onclick="generarPDF()" id="btnPDF" style="display: none;">Descargar PDF</button>
-        </div>
+         <div class="button-container">
+        <button type="button" onclick="generarImpresion()">Generar Vista Previa</button>
+        <button type="button" onclick="generarPDF()" id="btnPDF" style="display: none;">Descargar PDF</button>
+        <button type="button" onclick="firmarPDFConCertificadoNavegador(window.pdfBlob)" id="btnFirmarPDF" style="display: none;">Firmar PDF</button>
+    </div>
     </form>
 
 </body>
