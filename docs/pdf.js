@@ -19,18 +19,29 @@ function generarPDF() {
     html2pdf()
         .from(elementoTemporal)
         .set(options)
-        .outputPdf('blob') // Cambiar para obtener el PDF como Blob
+        .outputPdf('blob')
         .then((pdfBlob) => {
             // Guardar el PDF generado en una variable global
             window.pdfBlob = pdfBlob;
 
-            // Mostrar el botón de firma si se requiere
+            // Mostrar el botón de firma
             document.getElementById('btnFirmarPDF').style.display = 'inline-block';
+
+            // Descargar el PDF
+            const url = URL.createObjectURL(pdfBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = options.filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
 
             console.log('PDF generado exitosamente.');
         })
         .catch((error) => {
             console.error('Error al generar el PDF:', error);
+            alert('Error al generar el PDF: ' + error.message);
         })
         .finally(() => {
             // Limpieza del DOM
