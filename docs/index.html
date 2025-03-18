@@ -34,11 +34,11 @@
                 <tr>
                     <td>Data /  <span class="grisa">Fecha:
                         <br>
-                        <input type="date" id="fechaModifica" name="fechaModifica" required value="2025-01-01">
+                        <input type="date" id="fechaModifica" name="fechaModifica" required>
                     </td>
                     <td>Data /  <span class="grisa">Fecha:
                         <br>
-                        <input type="date" id="fechaNueva" name="fechaNueva" required value="2025-01-02">
+                        <input type="date" id="fechaNueva" name="fechaNueva" required>
                     </td> 
                 </tr>
                 <tr>
@@ -46,7 +46,6 @@
                         <br>
                         <input type="time" id="horaModificaInicio" name="horaModificaInicio" required value="08:00">
                         <input type="time" id="horaModificaFin" name="horaModificaFin" required value="09:00">
-
                     </td>
                     <td>Ordua /  <span class="grisa">Hora:
                         <br>
@@ -54,19 +53,27 @@
                         <input type="time" id="horaNuevaFin" name="horaNuevaFin" required value="09:00">
                     </td>
             </tbody>
-
-                
-            
         </table>
-    </div>
 
-
-         <div class="button-container">
-        <button type="button" onclick="generarImpresion()">Generar Vista Previa</button>
-        <button type="button" onclick="generarPDF()" id="btnPDF" style="display: none;">Descargar PDF</button>
-        <button type="button" onclick="firmarPDFConImagen()" id="btnFirmarPDF" style="display: none;">Firmar PDF</button>
-    </div>
+        <div class="button-container">
+            <button type="button" onclick="generarImpresion()">Generar Vista Previa</button>
+            <button type="button" onclick="generarPDF()" id="btnPDF" style="display: none;">Descargar PDF</button>
+            <button type="button" onclick="firmarPDFConImagen()" id="btnFirmarPDF" style="display: none;">Firmar PDF</button>
+        </div>
     </form>
 
+    <script>
+        // Obtener fecha actual en formato YYYY-MM-DD [[2]][[7]]
+        function getCurrentDate() {
+            return new Date().toISOString().split('T')[0];
+        }
+
+        // Establecer fecha actual al cargar la página [[8]]
+        window.onload = function() {
+            const currentDate = getCurrentDate();
+            document.getElementById('fechaModifica').value = currentDate;
+            document.getElementById('fechaNueva').value = currentDate;
+        };
+    </script>
 </body>
 </html>
