@@ -1,3 +1,28 @@
+// Función para seleccionar un archivo de imagen
+function seleccionarArchivoImagen() {
+    return new Promise((resolve, reject) => {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.png';
+
+        input.onchange = (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                if (file.type !== 'image/png') {
+                    reject(new Error('Por favor, seleccione un archivo PNG válido'));
+                    return;
+                }
+                console.log("Archivo de imagen seleccionado correctamente:", file);
+                resolve(file);
+            } else {
+                reject(new Error('No se seleccionó ningún archivo de imagen'));
+            }
+        };
+
+        input.click();
+    });
+}
+
 function seleccionarArchivoCertificado() {
     return new Promise((resolve, reject) => {
         const input = document.createElement('input');
